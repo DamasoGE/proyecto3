@@ -19,6 +19,7 @@ public abstract class Piano {
         this.teclaFinal=tf;
     }
 
+
     public int getTeclaInicial(){
         return this.teclaInicial;
     }

@@ -10,12 +10,13 @@ public class PianoSencillo extends Piano{
     private Map<Integer, Tecla> teclas;
 
     public PianoSencillo(int teclaInicial, int teclaFinal){
-        teclaInicial = 0;
-        teclaFinal = 0;
-        teclas = new HashMap<>();
+        super(teclaInicial,teclaFinal);
+        this.teclas = new HashMap<>();
+    }
 
-
-
+    @Override
+    public Tecla getTecla(int canal, int nota) {
+        return null;
     }
 
 }

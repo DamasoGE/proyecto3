@@ -15,17 +15,6 @@ public class ReproductorMidi implements Receiver {
             new Color(70, 102, 154)
     };
     private Piano piano;
-
-    public ReproductorMidi(){
-        throw new IllegalArgumentException();
-    }
-    public void reproducir(String ruta){
-        throw new IllegalArgumentException();
-    }
-    public void conectar(Piano p){
-        throw new IllegalArgumentException();
-    }
-
     @Override
     public void send(MidiMessage message, long timeStamp) {
         throw new IllegalArgumentException();
@@ -36,4 +25,15 @@ public class ReproductorMidi implements Receiver {
     public void close() {
         throw new IllegalArgumentException();
     }
+    public ReproductorMidi(){
+        throw new IllegalArgumentException();
+    }
+    public void reproducir(String ruta){
+        throw new IllegalArgumentException();
+    }
+    public void conectar(Piano p){
+        throw new IllegalArgumentException();
+    }
+
+
 }
