@@ -1,0 +1,23 @@
+DAMASO
+------
+Miercoles8: Ayudar Daniel y Adam
+
+LUIS
+----
+Miercoles8: Stub reproductor midi, receiver.
+
+ADAM
+----
+Miercoles8: Creo el esqueleto de las clases Tecla, con la ayuda de Dámaso.
+
+DANIEL
+----
+Miercoles8: Creo y mpiezo a programar las clases Medible, ElementoVisual, ElementoVisualTester, Pulsable con ayuda de Dámaso
+
+SALAH
+-----
+Miercoles8: Stub piano (ayuda Luis)
+
+ISMAEL
+-----
+Miercoles8: Stub piano sencillo y piano (ayuda Luis)
