@@ -1,5 +1,7 @@
 package programacion.piano.teclas;
 
+import java.awt.*;
+
 public class TeclaNegra extends Tecla{
     public static final int ANCHURA = 15;
     public static final int ALTURA = 50;
@@ -7,7 +9,6 @@ public class TeclaNegra extends Tecla{
         super(n);
 
     }
-
     @Override
     protected int[] getVerticesX() {
         return new int[0];
@@ -17,4 +18,5 @@ public class TeclaNegra extends Tecla{
     protected int[] getVerticesY() {
         return new int[0];
     }
+
 }
