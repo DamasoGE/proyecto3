@@ -1,4 +1,22 @@
 package programacion.piano.teclas;
 
-public class Tecla {
+import java.awt.*;
+
+public abstract class Tecla {
+    protected Point posicion;
+    private int nota;
+    private boolean pulsada;
+    private Color colorPulsada;
+    private Graphics graphics;
+
+    Tecla(int n){
+
+    }
+
+    public int getNumeroNota(){
+        throw new UnsupportedOperationException();
+    }
+
+    protected abstract int[] getVerticesX();
+    protected abstract int[] getVerticesY();
 }
