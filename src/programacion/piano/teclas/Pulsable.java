@@ -2,7 +2,7 @@ package programacion.piano.teclas;
 
 import java.awt.*;
 
-public interface Pulsable {
+public interface Pulsable extends ElementoVisual{
     public void pulsar();
     public void soltar();
     public boolean estaPulsado();
@@ -10,6 +10,12 @@ public interface Pulsable {
     public Color getColorPulsado();
     public Color getColorNoPulsado();
     public default Color getColor(){
-        throw new UnsupportedOperationException();
+        Color color;
+        if (estaPulsado()){
+            color=this.getColorPulsado();
+        }else{
+            color=this.getColorNoPulsado();
+        }
+        return color;
     }
 }
