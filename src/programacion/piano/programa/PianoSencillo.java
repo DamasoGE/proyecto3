@@ -4,7 +4,7 @@ import programacion.piano.teclas.Tecla;
 
 import java.util.Map;
 
-public class PianoSencillo {
+public class PianoSencillo extends Piano{
 
     private Map<Integer, Tecla> teclas;
 
