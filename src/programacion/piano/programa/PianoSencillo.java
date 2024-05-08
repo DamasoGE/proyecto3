@@ -10,10 +10,12 @@ public class PianoSencillo extends Piano{
     private Map<Integer, Tecla> teclas;
 
     public PianoSencillo(int teclaInicial, int teclaFinal){
-        teclaInicial = 0;
-        teclaFinal = 0;
-        teclas = new HashMap<>();
+        super(teclaInicial,teclaFinal);
+        this.teclas = new HashMap<>();
 
+        for(int i = 0; teclas.; i++){
+
+        }
 
 
     }
