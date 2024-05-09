@@ -8,7 +8,7 @@ public class TeclaBlanca2 extends TeclaBlanca{
     }
 
     @Override
-    public Color getColorNopulsado(){
+    public Color getColorNoPulsado(){
         return Color.WHITE;
     }
 
