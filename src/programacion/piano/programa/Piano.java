@@ -1,10 +1,11 @@
 package programacion.piano.programa;
 
+import programacion.piano.teclas.ElementoVisual;
 import programacion.piano.teclas.Tecla;
 
 import java.awt.*;
 
-public abstract class Piano {
+public abstract class Piano implements ElementoVisual {
 
     private int teclaInicial;
 
