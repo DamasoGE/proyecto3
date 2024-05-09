@@ -10,13 +10,37 @@ public class TeclaNegra extends Tecla{
 
     }
     @Override
+    public Color getColorNoPulsado() {
+        return Color.BLACK;
+    }
+
+    @Override
+    public int getAnchura() {
+        return ANCHURA;
+    }
+
+    @Override
+    public int getAltura() {
+        return ALTURA;
+    }
+    @Override
     protected int[] getVerticesX() {
-        return new int[0];
+        int[] verticesX = new int[4];
+        verticesX[0]=this.posicion.x;
+        verticesX[1]=this.posicion.x;
+        verticesX[2]=this.posicion.x + TeclaNegra.ANCHURA;
+        verticesX[3]=this.posicion.x + TeclaNegra.ANCHURA;
+        return verticesX;
     }
 
     @Override
     protected int[] getVerticesY() {
-        return new int[0];
+        int[] verticesY = new int[4];
+        verticesY[0]=this.posicion.y;
+        verticesY[1]=this.posicion.y + TeclaNegra.ALTURA;
+        verticesY[2]=this.posicion.x + TeclaNegra.ALTURA;
+        verticesY[3]=this.posicion.y;
+        return verticesY;
     }
 
 }

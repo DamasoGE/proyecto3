@@ -13,6 +13,7 @@ public abstract class Tecla implements Medible,Pulsable{
         this.nota = n;
         this.colorPulsada = null;
         this.posicion = null;
+        this.pulsada = false;
     }
 
     public int getNumeroNota(){
@@ -21,56 +22,51 @@ public abstract class Tecla implements Medible,Pulsable{
 
     @Override
     public void setPosicion(int x, int y) {
-        
+        posicion.setLocation(new Point(x, y));
     }
 
     @Override
     public void setGraphics(Graphics g) {
-
+        this.graphics = g;
     }
-
-    @Override
-    public void dibujar() {
-
-    }
-
     @Override
     public void pulsar() {
-
+        this.pulsada = true;
     }
 
     @Override
     public void soltar() {
+        this.pulsada = false;
+    }
 
+    @Override
+    public void dibujar() {
+        if (this.posicion==null || this.graphics==null){
+            throw new IllegalArgumentException("Hay que llamar a setPosición y\n" +
+                    "setGraphics antes de llamar al método dibujar");
+        }
+        this.graphics.setColor(this.getColor());
+        this.graphics.fillPolygon(this.getVerticesX(),this.getVerticesY(), getVerticesX().length);
+        this.graphics.setColor(Color.BLACK);
+        this.graphics.drawPolygon(this.getVerticesX(),this.getVerticesY(), getVerticesX().length);
+    }
+    @Override
+    public void setColorPulsado(Color c) {
+        this.colorPulsada = c;
     }
 
     @Override
     public boolean estaPulsado() {
-        return false;
-    }
-
-    @Override
-    public void setColorPulsado(Color c) {
-
+        boolean espulsado = false;
+        if (this.estaPulsado()){
+            espulsado = true;
+        }
+        return espulsado;
     }
 
     @Override
     public Color getColorPulsado() {
-        return null;
-    }
-
-    @Override
-    public Color getColorNoPulsado() {
-        return null;
-    }
-    @Override
-    public int getAnchura() {
-        return 0;
-    }
-
-    @Override
-    public int getAltura() {
-        return 0;
+        return colorPulsada;
     }
 
     protected abstract int[] getVerticesX();
