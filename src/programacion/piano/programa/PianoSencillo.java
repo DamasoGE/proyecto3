@@ -3,6 +3,7 @@ package programacion.piano.programa;
 import programacion.piano.teclas.Tecla;
 import programacion.piano.teclas.TeclaFactory;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,9 +24,8 @@ public class PianoSencillo extends Piano{
     @Override
     public void dibujar() {
         for(Tecla t : teclas.values()){
-            super.setGraphics(graphics);
-            super.setPosicion(posicion);
-
+            t.setGraphics(graphics);
+            t.setPosicion(posicion);
         }
     }
 
@@ -36,17 +36,18 @@ public class PianoSencillo extends Piano{
 
     @Override
     public void setPosicion(int x, int y) {
-
+        Point p = new Point(x,y);
+        p.setLocation(x,y);
     }
 
 
     @Override
     public int getAnchura() {
-        return 0;
+        return 25;
     }
 
     @Override
     public int getAltura() {
-        return 0;
+        return 100;
     }
 }
