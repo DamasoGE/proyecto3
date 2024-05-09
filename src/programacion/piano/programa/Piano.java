@@ -36,7 +36,6 @@ public abstract class Piano implements ElementoVisual{
     }
 
     public void setPosicion(Point posicion){
-
         this.posicion=posicion;
     }
 }

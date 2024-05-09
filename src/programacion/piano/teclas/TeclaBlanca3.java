@@ -1,8 +1,24 @@
 package programacion.piano.teclas;
 
+import java.awt.*;
+
 public class TeclaBlanca3 extends TeclaBlanca{
     TeclaBlanca3(int n){
         super(n);
+    }
+
+    @Override
+    public Color getColorNoPulsado(){
+        return Color.WHITE;
+    }
+    @Override
+    public int getAnchura(){
+        return ANCHURA;
+    }
+
+    @Override
+    public int getAltura(){
+        return ALTURA;
     }
 
     @Override
@@ -29,4 +45,6 @@ public class TeclaBlanca3 extends TeclaBlanca{
         verticesY[5] = this.posicion.y+TeclaNegra.ALTURA;
         return verticesY;
     }
+
+
 }
