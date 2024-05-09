@@ -20,6 +20,7 @@ public class ElementoVisualTester {
         CapaFondo capaFondo = consola.getCapaFondo();
         capaFondo.setFondo(new FondoColorSolido(Color.GRAY));
         this.graphics = capaCanvas.getGraphics();
+        e.setGraphics(this.graphics);
         this.elemento = e;
     }
     public void hacerPrueba(){
