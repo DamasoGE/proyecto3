@@ -8,7 +8,7 @@ LUIS
 ----
 Miercoles8: Stub reproductor midi, receiver.
 Jueves9: La clase ReproductorMidi terminada solo falta el conector y he ayudado a Salah e Ismael con Piano y pianoSencillo.
-Viernes10:
+Viernes10: He corregido la parte de conectar en el ReproductorMidi y he estado resolviendo problemas a Ismael. Le he ayudado a termianr el test de piano Sencillo.
 
 ADAM
 ----
@@ -20,7 +20,7 @@ DANIEL
 ----
 Miercoles8: Creo y mpiezo a programar las clases Medible, ElementoVisual, ElementoVisualTester, Pulsable con ayuda de Dámaso
 Jueves 9: Termino clase Elemento Visual Tester y Tecla Blanca3 con ayuda de Dámaso
-Viernes 10:
+Viernes 10: He ayudado a arreglar tecla blanca 3
 
 SALAH
 -----
