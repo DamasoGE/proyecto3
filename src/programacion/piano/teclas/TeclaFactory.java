@@ -6,7 +6,7 @@ public class TeclaFactory {
     }
     public static Tecla crearTecla(int nota){
         Tecla teclacreada;
-        int resto = nota/12;
+        int resto = nota%12;
         if(resto==0 || resto==5){
             teclacreada = new TeclaBlanca1(nota);
         }else if(resto==2 || resto==7 || resto==9){
