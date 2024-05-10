@@ -24,7 +24,7 @@ public class TeclaBlanca3 extends TeclaBlanca{
     @Override
     protected int[] getVerticesX() {
         int[]verticesX = new int[6];
-        int N = TeclaNegra.ANCHURA, B = TeclaBlanca.ALTURA;
+        int N = TeclaNegra.ANCHURA, B = TeclaBlanca.ANCHURA;
         verticesX[0] = this.posicion.x+B-N/2;
         verticesX[1] = this.posicion.x+B;
         verticesX[2] = this.posicion.x+B;

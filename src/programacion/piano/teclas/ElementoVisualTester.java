@@ -41,8 +41,7 @@ public class ElementoVisualTester {
         }
     }
     public static void main(String[] args){
-        ElementoVisualTester elementoVisualTester = new ElementoVisualTester((ElementoVisual) new TeclaNegra(60));
+        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new TeclaBlanca3(60));
         elementoVisualTester.hacerPrueba();
-        //HAY QUE REPASAR ESTO
     }
 }
