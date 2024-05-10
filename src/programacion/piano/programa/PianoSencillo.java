@@ -39,6 +39,4 @@ public class PianoSencillo extends Piano{
         return this.teclas.get(nota);
     }
 
-
-
 }
