@@ -38,7 +38,7 @@ public class TeclaNegra extends Tecla{
         int[] verticesY = new int[4];
         verticesY[0]=this.posicion.y;
         verticesY[1]=this.posicion.y + TeclaNegra.ALTURA;
-        verticesY[2]=this.posicion.x + TeclaNegra.ALTURA;
+        verticesY[2]=this.posicion.y + TeclaNegra.ALTURA;
         verticesY[3]=this.posicion.y;
         return verticesY;
     }

@@ -4,6 +4,7 @@ import bpc.daw.consola.CapaCanvas;
 import bpc.daw.consola.CapaFondo;
 import bpc.daw.consola.Consola;
 import bpc.daw.consola.FondoColorSolido;
+import programacion.piano.programa.PianoSencillo;
 
 import java.awt.*;
 
@@ -41,8 +42,7 @@ public class ElementoVisualTester {
         }
     }
     public static void main(String[] args){
-        ElementoVisualTester elementoVisualTester = new ElementoVisualTester((ElementoVisual) new TeclaNegra(60));
+        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new TeclaNegra(60));
         elementoVisualTester.hacerPrueba();
-        //HAY QUE REPASAR ESTO
     }
 }

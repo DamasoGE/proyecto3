@@ -2,7 +2,7 @@ package programacion.piano.teclas;
 
 import java.awt.*;
 
-public interface ElementoVisual extends Medible{
+public interface ElementoVisual{
     public void setPosicion(int x, int y);
     public void setGraphics(Graphics g);
     public void dibujar();

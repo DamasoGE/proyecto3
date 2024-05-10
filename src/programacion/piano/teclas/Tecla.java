@@ -22,7 +22,7 @@ public abstract class Tecla implements Medible,Pulsable{
 
     @Override
     public void setPosicion(int x, int y) {
-        posicion.setLocation(new Point(x, y));
+        this.posicion = new Point(x,y);
     }
 
     @Override
@@ -58,7 +58,7 @@ public abstract class Tecla implements Medible,Pulsable{
     @Override
     public boolean estaPulsado() {
         boolean espulsado = false;
-        if (this.estaPulsado()){
+        if (this.pulsada){
             espulsado = true;
         }
         return espulsado;

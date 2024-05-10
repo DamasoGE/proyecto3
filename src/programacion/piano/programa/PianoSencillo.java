@@ -1,7 +1,6 @@
 package programacion.piano.programa;
 
-import programacion.piano.teclas.Tecla;
-import programacion.piano.teclas.TeclaFactory;
+import programacion.piano.teclas.*;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -11,22 +10,28 @@ public class PianoSencillo extends Piano{
 
     private Map<Integer, Tecla> teclas;
 
-    public PianoSencillo(int teclaInicial, int teclaFinal){
-        super(teclaInicial, teclaFinal);
-        teclas = new HashMap<>();
+    public PianoSencillo(int teclaIncial, int teclaFinal) {
 
-        for(int i=teclaInicial; i<=teclaFinal; i++){
-            Tecla t = TeclaFactory.crearTecla(i);
-            teclas.put(i, t);
+        super(teclaIncial, teclaFinal);
+        this.teclas=new HashMap<>();
+
+        for (int i = teclaIncial; i <=teclaFinal ; i++) {
+
+            Tecla tecla=TeclaFactory.crearTecla(i);
+            this.teclas.put(i,tecla);
         }
     }
 
     @Override
     public void dibujar() {
-        for(Tecla t : teclas.values()){
-            t.setGraphics(graphics);
-            t.setPosicion(posicion);
+
+        for(Tecla tecla: teclas.values()){
+            tecla.setGraphics(graphics);
+            tecla.setPosicion(posicion.x, posicion.y);
+            posicion.x+=tecla.getAnchura();
+            tecla.dibujar();
         }
+
     }
 
     @Override
@@ -34,20 +39,4 @@ public class PianoSencillo extends Piano{
         return this.teclas.get(nota);
     }
 
-    @Override
-    public void setPosicion(int x, int y) {
-        Point p = new Point(x,y);
-        p.setLocation(x,y);
-    }
-
-
-    @Override
-    public int getAnchura() {
-        return 25;
-    }
-
-    @Override
-    public int getAltura() {
-        return 100;
-    }
 }
