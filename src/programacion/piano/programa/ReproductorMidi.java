@@ -28,6 +28,7 @@ public class ReproductorMidi implements Receiver {
         try {
             File file = new File(ruta);
             Sequence sequence = MidiSystem.getSequence(file);
+            this.conectar(piano);
             Sequencer sequencer =MidiSystem.getSequencer();
             sequencer.open();
             Transmitter transmitter = sequencer.getTransmitter();
@@ -49,6 +50,13 @@ public class ReproductorMidi implements Receiver {
         }
     }
     public void conectar(Piano p){
+        this.piano=p;
+        try {
+            Receiver a = MidiSystem.getSequencer().getTransmitter().getReceiver();
+            MidiSystem.getSequencer().getTransmitter().setReceiver(a);
+        } catch (MidiUnavailableException e) {
+            throw new RuntimeException(e);
+        }
 
     }
     @Override
