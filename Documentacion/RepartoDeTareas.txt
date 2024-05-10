@@ -2,28 +2,34 @@ DAMASO
 ------
 Miercoles8: Ayudar Daniel y Adam
 Jueves9: Ayudar Daniel y Adam. Hacer TeclaFactory.
+Viernes10: ElementoVisualTester funcional, TeclaFactoryTest funcional. Ayudar PianoSencillo.
 
 LUIS
 ----
 Miercoles8: Stub reproductor midi, receiver.
 Jueves9: La clase ReproductorMidi terminada solo falta el conector y he ayudado a Salah e Ismael con Piano y pianoSencillo.
+Viernes10:
 
 ADAM
 ----
 Miercoles8: Creo el esqueleto de las clases Tecla, con la ayuda de Dámaso.
 Jueves9: Terminar clases Tecla, TeclaNegra, TeclaBlanca y TeclaBlanca1, con ayuda de Dámaso.
+Viernes10: Ayudar con TeclaBlanca3.
 
 DANIEL
 ----
 Miercoles8: Creo y mpiezo a programar las clases Medible, ElementoVisual, ElementoVisualTester, Pulsable con ayuda de Dámaso
 Jueves 9: Termino clase Elemento Visual Tester y Tecla Blanca3 con ayuda de Dámaso
+Viernes 10:
 
 SALAH
 -----
 Miercoles8: Stub piano (ayuda Luis)
 Jueves 9: Termino la clase PianoSencillo con ayuda de ismael, Luis y Damaso
+Viernes: Intento de hacer pianoSenciloTest(error al pasar parametros)
 
 ISMAEL
 -----
 Miercoles8: Stub piano sencillo y piano (ayuda Luis)
 Jueves 9: Termino la clase PianoSencillo con ayuda de Salah y Luis
+Viernes 10: Creado y terminado Test PianoSencillo e intentando solucionar problemas visuales de piano

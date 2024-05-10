@@ -25,12 +25,12 @@ public class TeclaBlanca3 extends TeclaBlanca{
     protected int[] getVerticesX() {
         int[]verticesX = new int[6];
         int N = TeclaNegra.ANCHURA, B = TeclaBlanca.ANCHURA;
-        verticesX[0] = this.posicion.x+B-N/2;
+        verticesX[0] = this.posicion.x+N/2;
         verticesX[1] = this.posicion.x+B;
         verticesX[2] = this.posicion.x+B;
         verticesX[3] = this.posicion.x;
         verticesX[4] = this.posicion.x;
-        verticesX[5] = this.posicion.x+B-N/2;
+        verticesX[5] = this.posicion.x+N/2;
         return verticesX;
     }
 
