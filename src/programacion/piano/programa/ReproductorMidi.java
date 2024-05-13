@@ -50,18 +50,17 @@ public class ReproductorMidi implements Receiver {
         }
     }
     public void conectar(Piano p){
-     this.piano=p;
-
+        this.piano=p;
     }
     @Override
     public void send(MidiMessage message, long timeStamp) {
         if (message instanceof ShortMessage shortMessage){
             shortMessage.getChannel();
-            if (shortMessage.getChannel()!=9){
+            if (shortMessage.getChannel()==9){
                 shortMessage.getData1();
-                Tecla tecla = this.piano.getTecla(shortMessage.getChannel(), shortMessage.getData1());
+                Tecla tecla = this.piano.getTecla(shortMessage.getChannel(),shortMessage.getData1());
 
-                if ( tecla.getNumeroNota()== shortMessage.getData1()){
+                if (tecla.getNumeroNota()== shortMessage.getData1()){
                     if (shortMessage.getCommand()== ShortMessage.NOTE_ON){
                         if ( shortMessage.getData2()>0){
                             tecla.setColorPulsado(COLORES[shortMessage.getCommand()]);
@@ -75,7 +74,6 @@ public class ReproductorMidi implements Receiver {
                             if (shortMessage.getCommand()== ShortMessage.NOTE_OFF){
                                 tecla.soltar();
                             }
-
                         }
                     tecla.dibujar();
                 }
