@@ -11,7 +11,7 @@ public class PianoSencilloPrueba {
         ElementoVisualTester evt = new ElementoVisualTester(p);
         evt.hacerPrueba();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

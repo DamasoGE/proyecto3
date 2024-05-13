@@ -13,18 +13,18 @@ public class TeclaFactoryPruebas {
         int posicionx=20;
         Consola consola = new Consola();
         consola.getCapaFondo().setFondo(new FondoColorSolido(Color.GRAY));
-        Tecla[] tecla = new Tecla[70];
+        Tecla[] tecla = new Tecla[100];
 
-        for(int i=60; i<=64; i++){
+        for(int i=36; i<=39; i++){
             tecla[i] = TeclaFactory.crearTecla(i);
             tecla[i].setGraphics(consola.getCapaCanvas().getGraphics());
             tecla[i].setPosicion(posicionx,20);
             if(tecla[i] instanceof TeclaBlanca1){
                 posicionx+=TeclaNegra.ANCHURA;
             }else if(tecla[i] instanceof TeclaBlanca2){
-                posicionx+=TeclaNegra.ANCHURA;
+                posicionx+=3/2*TeclaNegra.ANCHURA;
             }else if(tecla[i] instanceof TeclaBlanca3){
-                posicionx+=TeclaNegra.ANCHURA/2;
+                posicionx+=TeclaBlanca.ANCHURA;
             }else{
                 posicionx+=TeclaNegra.ANCHURA/2;
             }

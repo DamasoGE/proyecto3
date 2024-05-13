@@ -26,9 +26,18 @@ public class PianoSencillo extends Piano{
     public void dibujar() {
 
         for(Tecla tecla: teclas.values()){
+
             tecla.setGraphics(graphics);
-            tecla.setPosicion(posicion.x, posicion.y);
-            posicion.x+=tecla.getAnchura();
+            tecla.setPosicion(posicion.x,posicion.y);
+            if(tecla instanceof TeclaBlanca1){
+                posicion.x+=TeclaNegra.ANCHURA;
+            }else if(tecla instanceof TeclaBlanca2){
+                posicion.x+=3/2*TeclaNegra.ANCHURA;
+            }else if(tecla instanceof TeclaBlanca3){
+                posicion.x+=TeclaBlanca.ANCHURA;
+            }else{
+                posicion.x+=TeclaNegra.ANCHURA/2;
+            }
             tecla.dibujar();
         }
 
