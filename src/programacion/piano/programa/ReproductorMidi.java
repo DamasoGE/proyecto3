@@ -50,13 +50,7 @@ public class ReproductorMidi implements Receiver {
         }
     }
     public void conectar(Piano p){
-        this.piano=p;
-        try {
-            Receiver a = MidiSystem.getSequencer().getTransmitter().getReceiver();
-            MidiSystem.getSequencer().getTransmitter().setReceiver(a);
-        } catch (MidiUnavailableException e) {
-            throw new RuntimeException(e);
-        }
+     this.piano=p;
 
     }
     @Override
@@ -65,7 +59,7 @@ public class ReproductorMidi implements Receiver {
             shortMessage.getChannel();
             if (shortMessage.getChannel()!=9){
                 shortMessage.getData1();
-                Tecla tecla = this.piano.getTecla(shortMessage.getChannel(),shortMessage.getData1());
+                Tecla tecla = this.piano.getTecla(shortMessage.getChannel(), shortMessage.getData1());
 
                 if ( tecla.getNumeroNota()== shortMessage.getData1()){
                     if (shortMessage.getCommand()== ShortMessage.NOTE_ON){
