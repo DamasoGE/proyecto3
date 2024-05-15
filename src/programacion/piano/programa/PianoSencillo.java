@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PianoSencillo extends Piano{
+public class PianoSencillo extends Piano {
 
     private Map<Integer, Tecla> teclas;
 
@@ -20,6 +20,16 @@ public class PianoSencillo extends Piano{
             Tecla tecla=TeclaFactory.crearTecla(i);
             this.teclas.put(i,tecla);
         }
+    }
+
+    @Override
+    public void setPosicion(int x, int y) {
+
+    }
+
+    @Override
+    public void setGraphics(Graphics g) {
+
     }
 
     @Override
@@ -48,4 +58,21 @@ public class PianoSencillo extends Piano{
         return this.teclas.get(nota);
     }
 
+    @Override
+    public int getAnchura() {
+        int sumaBlancas= 0;
+
+        for (int i = getTeclaInicial(); i <= getTeclaFinal() ; i++) {
+
+            sumaBlancas+=TeclaBlanca.ANCHURA;
+
+        }
+
+        return sumaBlancas;
+    }
+
+    @Override
+    public int getAltura() {
+        return TeclaBlanca.ALTURA;
+    }
 }
