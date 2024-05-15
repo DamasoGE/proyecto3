@@ -10,12 +10,12 @@ public class PianoSencillo extends Piano{
 
     private Map<Integer, Tecla> teclas;
 
-    public PianoSencillo(int teclaIncial, int teclaFinal) {
+    public PianoSencillo(int teclaInicial, int teclaFinal) {
 
-        super(teclaIncial, teclaFinal);
+        super(teclaInicial, teclaFinal);
         this.teclas=new HashMap<>();
 
-        for (int i = teclaIncial; i <=teclaFinal ; i++) {
+        for (int i = teclaInicial; i <=teclaFinal ; i++) {
 
             Tecla tecla=TeclaFactory.crearTecla(i);
             this.teclas.put(i,tecla);

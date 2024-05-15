@@ -61,7 +61,7 @@ public class ReproductorMidi implements Receiver {
             int comando = shortMessage.getCommand();
 
             if (canal != 9) {
-                Tecla tecla = this.piano.getTecla(canal, nota);
+                Tecla tecla = this.piano.getTecla(canal, nota-1);
 
                 if (comando == ShortMessage.NOTE_ON && volumen > 0) {
                     tecla.pulsar();

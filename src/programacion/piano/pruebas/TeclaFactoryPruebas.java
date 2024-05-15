@@ -15,7 +15,7 @@ public class TeclaFactoryPruebas {
         consola.getCapaFondo().setFondo(new FondoColorSolido(Color.GRAY));
         Tecla[] tecla = new Tecla[100];
 
-        for(int i=45; i<=71; i++){
+        for(int i=24; i<=35; i++){
             tecla[i] = TeclaFactory.crearTecla(i);
             tecla[i].setGraphics(consola.getCapaCanvas().getGraphics());
             tecla[i].setPosicion(posicionx,20);
