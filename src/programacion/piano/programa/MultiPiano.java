@@ -20,7 +20,8 @@ public class MultiPiano extends Piano {
     @Override
     public Tecla getTecla(int canal, int nota) {
         Tecla tecla;
-        return tecla;
+
+        return null;
     }
 
     @Override

@@ -63,9 +63,9 @@ public class PianoSencillo extends Piano {
         int sumaBlancas= 0;
 
         for (int i = getTeclaInicial(); i <= getTeclaFinal() ; i++) {
-
-            sumaBlancas+=TeclaBlanca.ANCHURA;
-
+            if (teclas.get(i) instanceof TeclaBlanca){
+                sumaBlancas+=TeclaBlanca.ANCHURA;
+            }
         }
 
         return sumaBlancas;
