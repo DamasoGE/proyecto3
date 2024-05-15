@@ -40,4 +40,8 @@ public abstract class Piano implements ElementoVisual{
         this.posicion= new Point(x,y);
 
     }
+
+    public abstract int getAnchura();
+
+    public abstract int getAltura();
 }

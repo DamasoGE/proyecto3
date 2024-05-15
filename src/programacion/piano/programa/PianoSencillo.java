@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PianoSencillo extends Piano{
+public class PianoSencillo extends Piano implements Medible{
 
     private Map<Integer, Tecla> teclas;
 
@@ -46,6 +46,25 @@ public class PianoSencillo extends Piano{
     @Override
     public Tecla getTecla(int canal, int nota) {
         return this.teclas.get(nota);
+    }
+
+    @Override
+    public int getAnchura() {
+
+        int totalBlancas= 0;
+
+        for (int i = getTeclaInicial(); i <= getTeclaFinal() ; i++) {
+
+            totalBlancas+=TeclaBlanca.ANCHURA;
+
+        }
+
+        return totalBlancas;
+    }
+
+    @Override
+    public int getAltura() {
+        return TeclaBlanca.ALTURA;
     }
 
 }

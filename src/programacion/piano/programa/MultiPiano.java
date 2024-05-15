@@ -13,7 +13,7 @@ public class MultiPiano extends Piano{
         super(teclaInicial, teclaFinal);
         pianos = new ArrayList<>();
 
-        pianos.add(new PianoSencillo(teclaInicial, teclaFinal));
+
         pianos.add(new PianoSencillo(teclaInicial, teclaFinal));
         pianos.add(new PianoSencillo(teclaInicial, teclaFinal));
         pianos.add(new PianoSencillo(teclaInicial, teclaFinal));
