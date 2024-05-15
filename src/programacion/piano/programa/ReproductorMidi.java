@@ -66,15 +66,13 @@ public class ReproductorMidi implements Receiver {
                 if (comando == ShortMessage.NOTE_ON && volumen > 0) {
                     tecla.pulsar();
                     tecla.setColorPulsado(COLORES[nota % COLORES.length]);
-                    tecla.dibujar();
                 } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
                     tecla.soltar();
-                    tecla.dibujar();
                 }
+                tecla.dibujar();
             }
         }
     }
-
 
     @Override
     public void close() {
