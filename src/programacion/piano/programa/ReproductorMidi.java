@@ -54,36 +54,27 @@ public class ReproductorMidi implements Receiver {
     }
     @Override
     public void send(MidiMessage message, long timeStamp) {
-        if (message instanceof ShortMessage shortMessage){
-            shortMessage.getChannel();
-            if (shortMessage.getChannel()==9){
-                shortMessage.getData1();
-                Tecla tecla = this.piano.getTecla(shortMessage.getChannel(),shortMessage.getData1());
+        if (message instanceof ShortMessage shortMessage) {
+            int canal = shortMessage.getChannel();
+            int nota = shortMessage.getData1();
+            int volumen = shortMessage.getData2();
+            int comando = shortMessage.getCommand();
 
-                if (tecla.getNumeroNota()== shortMessage.getData1()){
-                    if (shortMessage.getCommand()== ShortMessage.NOTE_ON){
-                        if ( shortMessage.getData2()>0){
-                            tecla.setColorPulsado(COLORES[shortMessage.getCommand()]);
-                            tecla.pulsar();
-                        }
-                        else{
-                            tecla.soltar();
-                        }
-                    }
-                        else{
-                            if (shortMessage.getCommand()== ShortMessage.NOTE_OFF){
-                                tecla.soltar();
-                            }
-                        }
+            if (canal != 9) {
+                Tecla tecla = this.piano.getTecla(canal, nota);
+
+                if (comando == ShortMessage.NOTE_ON && volumen > 0) {
+                    tecla.pulsar();
+                    tecla.setColorPulsado(COLORES[nota % COLORES.length]);
+                    tecla.dibujar();
+                } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
+                    tecla.soltar();
                     tecla.dibujar();
                 }
-
             }
-
         }
-
-
     }
+
 
     @Override
     public void close() {
