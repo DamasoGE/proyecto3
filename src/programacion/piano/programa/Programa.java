@@ -14,7 +14,7 @@ public class Programa {
         ct.println("Introduce la ruta del archivo midi: ");
         String ruta = teclado.leerCadenaCaracteres();
 
-        PianoSencillo pianoSencillo = new PianoSencillo(24,108);
+        MultiPiano pianoSencillo = new MultiPiano(24,108);
         pianoSencillo.setGraphics(cv.getGraphics());
         pianoSencillo.setPosicion(120,90);
         pianoSencillo.dibujar();

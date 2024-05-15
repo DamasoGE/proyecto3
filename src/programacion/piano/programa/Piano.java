@@ -1,12 +1,13 @@
 package programacion.piano.programa;
 
 import programacion.piano.teclas.ElementoVisual;
+import programacion.piano.teclas.ElementoVisualTester;
 import programacion.piano.teclas.Medible;
 import programacion.piano.teclas.Tecla;
 
 import java.awt.*;
 
-public abstract class Piano implements Medible {
+public abstract class Piano implements ElementoVisual {
 
     private int teclaInicial;
 

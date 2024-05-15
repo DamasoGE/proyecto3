@@ -11,7 +11,7 @@ public class PianoSencilloTest {
 
         PianoSencillo pianoSencillo=new PianoSencillo(36,48);
 
-        assertEquals(325,pianoSencillo.getAnchura());
+        assertEquals(200,pianoSencillo.getAnchura());
         assertEquals(100,pianoSencillo.getAltura());
 
     }

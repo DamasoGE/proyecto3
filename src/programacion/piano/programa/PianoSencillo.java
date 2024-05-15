@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PianoSencillo extends Piano {
+public class PianoSencillo extends Piano implements Medible {
 
     private Map<Integer, Tecla> teclas;
 

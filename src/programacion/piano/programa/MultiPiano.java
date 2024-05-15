@@ -19,23 +19,19 @@ public class MultiPiano extends Piano {
 
     @Override
     public Tecla getTecla(int canal, int nota) {
-        Tecla tecla;
-
-        return null;
+        return pianos.get(canal).getTecla(canal, nota);
     }
 
     @Override
     public void dibujar() {
-        pianos.get(1).dibujar();
+        int columnas = 2;
+        for (int i = 0; i < pianos.size(); i++) {
+            PianoSencillo piano = pianos.get(i);
+            int fila = i / columnas;
+            int col = i % columnas;
+            piano.setPosicion(posicion.x + col * piano.getAnchura(), posicion.y + fila * piano.getAltura());
+            piano.dibujar();
+        }
     }
 
-    @Override
-    public int getAnchura() {
-        return 0;
-    }
-
-    @Override
-    public int getAltura() {
-        return 0;
-    }
 }
