@@ -22,14 +22,12 @@ public class PianoSencillo extends Piano implements Medible {
         }
     }
 
-
-
     @Override
     public void dibujar() {
 
         for(int i=this.getTeclaInicial(); i<=this.getTeclaFinal(); i++){
             teclas.get(i).setGraphics(graphics);
-            teclas.get(i).setPosicion(posicion.x,20);
+            teclas.get(i).setPosicion(posicion.x, posicion.y);
             if(teclas.get(i) instanceof TeclaBlanca1){
                 posicion.x+=TeclaNegra.ANCHURA;
             }else if(teclas.get(i) instanceof TeclaBlanca2){
