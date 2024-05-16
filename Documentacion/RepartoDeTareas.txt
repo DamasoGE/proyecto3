@@ -3,33 +3,51 @@ DAMASO
 Miercoles8: Ayudar Daniel y Adam
 Jueves9: Ayudar Daniel y Adam. Hacer TeclaFactory.
 Viernes10: ElementoVisualTester funcional, TeclaFactoryTest funcional. Ayudar PianoSencillo.
+Lunes13: Corregir Errores reproductor midi. Arreglar disposición teclas.
+Miercoles15: Terminar de corregir errores. Final proyecto3. Comienzo de la ampliacion.
+Jueves16: Ayudar a corregir errores ampliación.
 
 LUIS
 ----
 Miercoles8: Stub reproductor midi, receiver.
 Jueves9: La clase ReproductorMidi terminada solo falta el conector y he ayudado a Salah e Ismael con Piano y pianoSencillo.
 Viernes10: He corregido la parte de conectar en el ReproductorMidi y he estado resolviendo problemas a Ismael. Le he ayudado a termianr el test de piano Sencillo.
+Lunes13: Corregir errores reproductor midi y conseguir arreglarlo simplificando codigo.
+Miercoles15: Terminar de corregir errores. Final proyecto3. Comienzo de la ampliacion.
+Jueves16: Ayudar a corregir errores ampliación y terminar proyecto.
 
 ADAM
 ----
 Miercoles8: Creo el esqueleto de las clases Tecla, con la ayuda de Dámaso.
 Jueves9: Terminar clases Tecla, TeclaNegra, TeclaBlanca y TeclaBlanca1, con ayuda de Dámaso.
 Viernes10: Ayudar con TeclaBlanca3.
+Lunes13: Ayudar y entender código de reeproductorMidi de Luis y Dámaso.
+Miercoles15:Ayudar a terminar el proyecto y empezar la ampliación.
+Jueves16: Ayudar y entender el código de la ampliación de Luis, Dámaso y Salah.
 
 DANIEL
 ----
 Miercoles8: Creo y mpiezo a programar las clases Medible, ElementoVisual, ElementoVisualTester, Pulsable con ayuda de Dámaso
 Jueves 9: Termino clase Elemento Visual Tester y Tecla Blanca3 con ayuda de Dámaso
 Viernes 10: He ayudado a arreglar tecla blanca 3
+Lunes13: Observar, ayudar y entender código de reeproductor midi.
+Miercoles15: Terminar el proyecto y empezar la ampliación.
+Jueves16: Ayudar y entender código de la ampliación terminandola.
 
 SALAH
 -----
 Miercoles8: Stub piano (ayuda Luis)
 Jueves 9: Termino la clase PianoSencillo con ayuda de ismael, Luis y Damaso
 Viernes: Intento de hacer pianoSenciloTest(error al pasar parametros)
+Lunes13: ayudar en corregir errores.
+Miercoles15:correcion del metodo send de la clase reproductorMidi y hacer tarea 1 de ampliacion
+Jueves16: corregir multipiano.
 
 ISMAEL
 -----
-Miercoles8: Stub piano sencillo y piano (ayuda Luis)
-Jueves 9: Termino la clase PianoSencillo con ayuda de Salah y Luis
-Viernes 10: Creado y terminado Test PianoSencillo e intentando solucionar problemas visuales de piano
+Miercoles8: Stub piano sencillo y piano (ayuda Luis).
+Jueves 9: Termino la clase PianoSencillo con ayuda de Salah y Luis.
+Viernes 10: Creado y terminado Test PianoSencillo e intentando solucionar problemas visuales de piano.
+Lunes13: Ayudando con el código por que las teclas no dibujaban.
+Miercoles15: Programando las clases MultiPiano, PianoSencillo de la ampliación con Luis y Salah.
+Jueves16: Ayudar a terminar el codigo de la ampliacion y retocar cosas para final del proyecto.
