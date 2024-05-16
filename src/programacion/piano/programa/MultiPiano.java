@@ -25,25 +25,19 @@ public class MultiPiano extends Piano {
 
     @Override
     public void dibujar() {
+        int posx=20;
         int posy=20;
 
-        pianos.get(0).setGraphics(this.graphics);
-        pianos.get(0).setPosicion(0, 0);
-        pianos.get(0).dibujar();
-
-
-        /*
         for (int i = 0; i < pianos.size(); i++) {
             pianos.get(i).setGraphics(this.graphics);
             if(i%2==0){
                 pianos.get(i).setPosicion(posx, posy);
             }else{
                 pianos.get(i).setPosicion(posx+this.pianos.get(i).getAnchura(), posy);
+                posy+= TeclaBlanca.ALTURA;
             }
             pianos.get(i).dibujar();
-            posy+= TeclaBlanca.ANCHURA;
         }
-        */
 
     }
 
