@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ReproductorMidi implements Receiver {
     private static final Color[] COLORES = {
-            Color.BLACK, Color.WHITE, Color.RED, Color.GREEN,
+            Color.RED, Color.GREEN, Color.BLACK, Color.WHITE,
             Color.BLUE, Color.YELLOW, Color.CYAN, Color.MAGENTA,
             Color.GRAY, Color.PINK, Color.ORANGE, Color.LIGHT_GRAY,
             Color.DARK_GRAY,
@@ -61,20 +61,20 @@ public class ReproductorMidi implements Receiver {
             int comando = shortMessage.getCommand();
 
             if (canal != 9) {
-                Tecla tecla = this.piano.getTecla(canal, nota-1);
-
-                if (comando == ShortMessage.NOTE_ON && volumen > 0) {
-                    tecla.pulsar();
-                    tecla.setColorPulsado(COLORES[nota % COLORES.length]);
-                    tecla.dibujar();
-                } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
-                    tecla.soltar();
+                Tecla tecla = this.piano.getTecla(canal, nota);
+                if (tecla!=null){
+                    if (comando == ShortMessage.NOTE_ON && volumen > 0) {
+                        tecla.pulsar();
+                        tecla.setColorPulsado(COLORES[canal]);
+                    } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
+                        tecla.soltar();
+                    }
                     tecla.dibujar();
                 }
+
             }
         }
     }
-
 
     @Override
     public void close() {

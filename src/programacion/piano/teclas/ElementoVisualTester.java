@@ -29,7 +29,7 @@ public class ElementoVisualTester {
         this.elemento.setGraphics(this.graphics);
         this.elemento.dibujar();
         try {
-            Thread.sleep(40000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -47,7 +47,7 @@ public class ElementoVisualTester {
         }
     }
     public static void main(String[] args){
-        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new PianoSencillo(24,35));
+        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new PianoSencillo(36,70));
         elementoVisualTester.hacerPrueba();
     }
 }

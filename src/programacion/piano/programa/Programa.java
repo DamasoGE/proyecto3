@@ -13,10 +13,8 @@ public class Programa {
         consola.getCapaFondo().setFondo(new FondoColorSolido(0,0,70));
         ct.println("Introduce la ruta del archivo midi: ");
         String ruta = teclado.leerCadenaCaracteres();
-
-        PianoSencillo pianoSencillo = new PianoSencillo(24,107);
+        MultiPiano pianoSencillo = new MultiPiano(36,88);
         pianoSencillo.setGraphics(cv.getGraphics());
-        pianoSencillo.setPosicion(120,90);
         pianoSencillo.dibujar();
         ReproductorMidi reproductorMidi = new ReproductorMidi();
         reproductorMidi.conectar(pianoSencillo);
