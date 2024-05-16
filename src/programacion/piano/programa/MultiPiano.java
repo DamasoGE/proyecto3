@@ -10,17 +10,22 @@ public class MultiPiano extends Piano {
     private List<PianoSencillo> pianos;
     public MultiPiano(int ti, int tf) {
         super(ti, tf);
-        PianoSencillo ps = new PianoSencillo(ti,tf);
+
         pianos = new ArrayList<>();
 
         for (int i = 0; i < 16 ; i++) {
-            pianos.add(ps);
+
+            pianos.add( new PianoSencillo(ti,tf));
         }
     }
 
     @Override
     public Tecla getTecla(int canal, int nota) {
-        return this.pianos.get(canal).getTecla(canal, nota);
+        Tecla tecla= null;
+        if (canal >= 0 && canal < pianos.size()) {
+            tecla= pianos.get(canal).getTecla(canal, nota);
+        }
+        return tecla;
     }
 
     @Override
