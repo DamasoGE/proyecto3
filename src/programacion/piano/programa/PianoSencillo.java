@@ -22,15 +22,7 @@ public class PianoSencillo extends Piano implements Medible {
         }
     }
 
-    @Override
-    public void setPosicion(int x, int y) {
 
-    }
-
-    @Override
-    public void setGraphics(Graphics g) {
-
-    }
 
     @Override
     public void dibujar() {

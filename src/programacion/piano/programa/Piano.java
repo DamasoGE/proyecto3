@@ -40,6 +40,5 @@ public abstract class Piano implements ElementoVisual {
     @Override
     public void setPosicion(int x, int y) {
         this.posicion= new Point(x,y);
-
     }
 }

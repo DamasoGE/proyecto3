@@ -24,14 +24,20 @@ public class MultiPiano extends Piano {
 
     @Override
     public void dibujar() {
-        int columnas = 2;
+        int rows = 8;
+        int cols = 2;
         for (int i = 0; i < pianos.size(); i++) {
             PianoSencillo piano = pianos.get(i);
-            int fila = i / columnas;
-            int col = i % columnas;
-            piano.setPosicion(posicion.x + col * piano.getAnchura(), posicion.y + fila * piano.getAltura());
+            int row = i / cols;
+            int col = i % cols;
+            int x = posicion.x + col * piano.getAnchura();
+            int y = posicion.y + row * piano.getAltura();
+            piano.setPosicion(x, y);
+            piano.setGraphics(this.graphics);
             piano.dibujar();
+
         }
     }
+
 
 }
