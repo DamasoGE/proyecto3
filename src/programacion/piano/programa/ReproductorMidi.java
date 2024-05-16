@@ -60,16 +60,17 @@ public class ReproductorMidi implements Receiver {
             int volumen = shortMessage.getData2();
             int comando = shortMessage.getCommand();
 
-            if (canal != 9) {
+            if(canal!=9){
                 Tecla tecla = this.piano.getTecla(canal, nota);
-
-                if (comando == ShortMessage.NOTE_ON && volumen > 0) {
-                    tecla.pulsar();
-                    tecla.setColorPulsado(COLORES[nota % COLORES.length]);
-                } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
-                    tecla.soltar();
+                if(tecla!=null){
+                    if (comando == ShortMessage.NOTE_ON && volumen > 0) {
+                        tecla.pulsar();
+                        tecla.setColorPulsado(COLORES[nota % COLORES.length]);
+                    } else if (comando == ShortMessage.NOTE_OFF || (comando == ShortMessage.NOTE_ON && volumen == 0)) {
+                        tecla.soltar();
+                    }
+                    tecla.dibujar();
                 }
-                tecla.dibujar();
             }
         }
     }
