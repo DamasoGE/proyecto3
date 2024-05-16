@@ -11,13 +11,15 @@ import java.util.List;
 
 public class ReproductorMidi implements Receiver {
     private static final Color[] COLORES = {
-            Color.RED, Color.GREEN, Color.BLACK, Color.WHITE,
+            Color.RED, Color.GREEN,
             Color.BLUE, Color.YELLOW, Color.CYAN, Color.MAGENTA,
             Color.GRAY, Color.PINK, Color.ORANGE, Color.LIGHT_GRAY,
             Color.DARK_GRAY,
             new Color(23, 217, 131),
             new Color(180, 131, 78),
-            new Color(70, 102, 154)
+            new Color(70, 102, 154),
+            new Color(0x764D3C),
+            new Color(0x5B1BB4)
     };
     private Piano piano;
 
