@@ -28,6 +28,11 @@ public class ElementoVisualTester {
         this.elemento.setPosicion(120,90);
         this.elemento.setGraphics(this.graphics);
         this.elemento.dibujar();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (this.elemento instanceof Pulsable pulsable){
             pulsable.setColorPulsado(Color.BLUE);
             try {
@@ -42,7 +47,7 @@ public class ElementoVisualTester {
         }
     }
     public static void main(String[] args){
-        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new TeclaBlanca3(60));
+        ElementoVisualTester elementoVisualTester = new ElementoVisualTester(new PianoSencillo(36,70));
         elementoVisualTester.hacerPrueba();
     }
 }

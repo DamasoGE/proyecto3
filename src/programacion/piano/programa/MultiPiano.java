@@ -1,6 +1,7 @@
 package programacion.piano.programa;
 
 import programacion.piano.teclas.Tecla;
+import programacion.piano.teclas.TeclaBlanca;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +25,26 @@ public class MultiPiano extends Piano {
 
     @Override
     public void dibujar() {
-        int columnas = 2;
+        int posy=20;
+
+        pianos.get(0).setGraphics(this.graphics);
+        pianos.get(0).setPosicion(0, 0);
+        pianos.get(0).dibujar();
+
+
+        /*
         for (int i = 0; i < pianos.size(); i++) {
-            PianoSencillo piano = pianos.get(i);
-            int fila = i / columnas;
-            int col = i % columnas;
-            piano.setPosicion(posicion.x + col * piano.getAnchura(), posicion.y + fila * piano.getAltura());
-            piano.dibujar();
+            pianos.get(i).setGraphics(this.graphics);
+            if(i%2==0){
+                pianos.get(i).setPosicion(posx, posy);
+            }else{
+                pianos.get(i).setPosicion(posx+this.pianos.get(i).getAnchura(), posy);
+            }
+            pianos.get(i).dibujar();
+            posy+= TeclaBlanca.ANCHURA;
         }
+        */
+
     }
 
 }
