@@ -20,7 +20,7 @@ public class MultiPiano extends Piano {
 
     @Override
     public Tecla getTecla(int canal, int nota) {
-        return pianos.get(canal).getTecla(canal, nota);
+        return this.pianos.get(canal).getTecla(canal, nota);
     }
 
     @Override
