@@ -8,12 +8,13 @@ import java.util.List;
 
 public class MultiPiano extends Piano {
     private List<PianoSencillo> pianos;
+
     public MultiPiano(int ti, int tf) {
         super(ti, tf);
-        PianoSencillo ps = new PianoSencillo(ti,tf);
         pianos = new ArrayList<>();
 
         for (int i = 0; i < 16 ; i++) {
+            PianoSencillo ps = new PianoSencillo(ti,tf);
             pianos.add(ps);
         }
     }
@@ -38,7 +39,5 @@ public class MultiPiano extends Piano {
             }
             pianos.get(i).dibujar();
         }
-
     }
-
 }
